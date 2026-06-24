@@ -2,6 +2,9 @@ import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { SwRegister } from "./sw-register";
+import { SuiteBar } from "@leader/marketing-ui";
+
+const APP_URL = "https://app.leaderhq.io";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -53,6 +56,7 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        <SuiteBar appUrl={APP_URL} />
         {children}
         <SwRegister />
       </body>

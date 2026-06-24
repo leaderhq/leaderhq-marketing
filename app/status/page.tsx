@@ -1,9 +1,8 @@
 import type { Metadata } from 'next';
-import { SuiteBar, SiteNav, SiteFooter } from '@leader/marketing-ui';
+import { SiteNav, SiteFooter } from '@leader/marketing-ui';
 import { StatusBoard } from './status-board';
 
 const APP_URL = 'https://app.leaderhq.io';
-
 const FOOTER_COLUMNS = [
   {
     heading: 'Product',
@@ -44,7 +43,6 @@ export const metadata: Metadata = {
 export default function StatusPage() {
   return (
     <div className="flex min-h-screen flex-col bg-white text-zinc-900">
-      <SuiteBar appUrl={APP_URL} />
       <SiteNav
         productSuffix="HQ"
         links={[

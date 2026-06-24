@@ -1,28 +1,33 @@
 import type { Metadata } from 'next';
-import { SuiteBar, SiteNav, SiteFooter, FadeIn } from '@leader/marketing-ui';
+import { SiteNav, SiteFooter, FadeIn } from '@leader/marketing-ui';
 import { MarketingIcon } from '@/app/_marketing/icons';
 
 export const metadata: Metadata = {
-  title: 'Contact — LeaderLeads',
+  title: 'Contact — LeaderHQ',
   description:
-    'Get in touch with LeaderLeads — product questions, team plans, custom pricing, and partnership inquiries. We respond within one business day.',
+    'Get in touch with LeaderHQ — product questions, team plans, custom pricing, and partnership inquiries. We respond within one business day.',
   alternates: { canonical: '/contact' },
 };
 
+const APP_URL = 'https://app.leaderhq.io';
+
 // Marketing form posts to mailto for now — the app/auth origin handles real
-// inbound on leads.leaderhq.io. Keeps this page a server component.
+// inbound. Keeps this page a server component.
 const SUPPORT_EMAIL = 'support@leaderhq.io';
 
 export default function ContactPage() {
   return (
     <div className="flex min-h-screen flex-col bg-white text-zinc-900">
-      <SuiteBar appUrl="https://task.leaderhq.io" />
       <SiteNav
-        productSuffix="Leads"
-        links={[{ label: "How It Works", href: "/how-it-works" }, { label: "Memory Moment", href: "/memory-moment" }, { label: "Solutions", href: "#" }, { label: "Blog", href: "/blog" }]}
-        ctaLabel="Get Your Free Card"
-        ctaHref="/signup"
-        loginHref="https://leads.leaderhq.io/login"
+        productSuffix="HQ"
+        links={[
+          { label: 'How It Works', href: '/#how-it-works' },
+          { label: 'Suite', href: '/#suite' },
+          { label: 'Solutions', href: '#' },
+        ]}
+        ctaLabel="Get LeaderHQ"
+        ctaHref={`${APP_URL}/join`}
+        loginHref={`${APP_URL}/login`}
       />
       <main className="flex-1">
         {/* Hero */}
@@ -199,8 +204,12 @@ export default function ContactPage() {
         </section>
       </main>
       <SiteFooter
-        productSuffix="Leads"
-        columns={[{"heading":"Product","links":[{"label":"How It Works","href":"/how-it-works"},{"label":"Memory Moment","href":"/memory-moment"},{"label":"Event Mode","href":"/how-it-works#event-mode"},{"label":"Pricing","href":"/pricing"},{"label":"System Status","href":"https://leaderhq.io/status"}]},{"heading":"Solutions","links":[{"label":"Network Marketing","href":"/for-network-marketing"},{"label":"Conferences & Events","href":"/for-conferences"},{"label":"Summer Sales","href":"/for-summer-sales"},{"label":"Sales Teams","href":"/for-teams"},{"label":"Blog & Resources","href":"/blog"}]},{"heading":"Company","links":[{"label":"About LeaderHQ","href":"/about"},{"label":"Contact","href":"/contact"},{"label":"Privacy Policy","href":"/privacy"},{"label":"Terms of Service","href":"/terms"},{"label":"Security & GDPR","href":"/security"}]}]}
+        productSuffix="HQ"
+        columns={[
+          { heading: 'Product', links: [{ label: 'How It Works', href: '/#how-it-works' }, { label: 'Action Intelligence', href: '/#intelligence' }, { label: 'Leader Suite', href: '/#suite' }, { label: 'Pricing', href: '/pricing' }] },
+          { heading: 'Solutions', links: [{ label: 'Network Marketing', href: '/for/network-marketing' }, { label: 'Conferences & Events', href: '/for/conferences' }, { label: 'Sales Teams', href: '/for/sales-teams' }] },
+          { heading: 'Company', links: [{ label: 'About LeaderHQ', href: '/about' }, { label: 'Contact', href: '/contact' }, { label: 'Privacy Policy', href: '/privacy' }, { label: 'Terms of Service', href: '/terms' }, { label: 'Security & GDPR', href: '/security' }] },
+        ]}
       />
     </div>
   );

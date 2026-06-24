@@ -1,43 +1,47 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
-import { SuiteBar, SiteNav, SiteFooter, FadeIn } from '@leader/marketing-ui';
+import { SiteNav, SiteFooter, FadeIn } from '@leader/marketing-ui';
 import { MarketingIcon } from '@/app/_marketing/icons';
 
 export const metadata: Metadata = {
-  title: 'About — LeaderLeads',
+  title: 'About — LeaderHQ',
   description:
-    'LeaderLeads is part of the Leader Suite — built by the people who lived the problem of losing leads at every event, expo, and door.',
+    'LeaderHQ is the intelligence layer for the Leader Suite — built by the people who lived the problem of losing momentum, missing rank windows, and guessing who to call next.',
   alternates: { canonical: '/about' },
 };
+
+const APP_URL = 'https://app.leaderhq.io';
 
 const VALUES = [
   {
     icon: 'handshake',
-    title: 'Relationships over records',
-    body: "A contact list is infrastructure. A relationship is the point. Everything we build is designed to make real human connection more durable and more likely — not to replace it with data.",
+    title: 'Relationships over reports',
+    body: 'A dashboard is infrastructure. A conversation is the point. Everything we build is designed to surface the right person to call at the right moment — not to replace judgment with charts.',
   },
   {
     icon: 'bolt',
     title: 'Simple by default',
-    body: "If it requires training, it won't get used. Every feature in LeaderLeads has to work for a rep who's tired, moving fast, and has 15 seconds between conversations at a full expo floor.",
+    body: "If it requires training, it won't get used. Every feature in LeaderHQ has to work for a field leader who's tired, moving fast, and has 10 minutes before their next team call.",
   },
   {
     icon: 'gift',
-    title: 'Free where it matters',
-    body: 'The card is free. Sharing is free. We believe every sales professional deserves a professional tool regardless of budget — and we prove it by making the core experience genuinely free, not a crippled preview.',
+    title: 'Built for the field',
+    body: 'We built LeaderHQ because enterprise BI tools were never designed for network marketing. We know the comp plans, the rank cycles, and the pressure of a closing month.',
   },
 ] as const;
 
 export default function AboutPage() {
   return (
     <div className="flex min-h-screen flex-col bg-white text-zinc-900">
-      <SuiteBar appUrl="https://task.leaderhq.io" />
       <SiteNav
-        productSuffix="Leads"
-        links={[{ label: "How It Works", href: "/how-it-works" }, { label: "Memory Moment", href: "/memory-moment" }, { label: "Solutions", href: "#" }, { label: "Blog", href: "/blog" }]}
-        ctaLabel="Get Your Free Card"
-        ctaHref="/signup"
-        loginHref="https://leads.leaderhq.io/login"
+        productSuffix="HQ"
+        links={[
+          { label: 'How It Works', href: '/#how-it-works' },
+          { label: 'Suite', href: '/#suite' },
+          { label: 'Solutions', href: '#' },
+        ]}
+        ctaLabel="Get LeaderHQ"
+        ctaHref={`${APP_URL}/join`}
+        loginHref={`${APP_URL}/login`}
       />
       <main className="flex-1">
         {/* Hero */}
@@ -53,11 +57,10 @@ export default function AboutPage() {
                 we lived the problem.
               </h1>
               <p className="mt-6 text-lg leading-relaxed text-zinc-300 sm:text-xl">
-                LeaderLeads is part of the Leader suite of software products — a
-                set of tools built for the people who lead, sell, and build in
-                the real world. Not the conference room. The conference floor,
-                the expo hall, while waiting in line to pay for groceries and at
-                the door.
+                LeaderHQ is the intelligence layer for the Leader Suite — a set
+                of tools built for the people who lead, sell, and build in the
+                real world. Not the conference room. The conference floor, the
+                expo hall, and the closing push at the end of rank week.
               </p>
             </FadeIn>
           </div>
@@ -70,32 +73,30 @@ export default function AboutPage() {
               The story behind the product
             </h2>
             <p className="mt-8 text-lg leading-relaxed text-zinc-600">
-              Network marketing, direct sales, and event-based business
-              development share one problem: the most valuable moment — the
-              introduction — is almost always the worst-captured moment. You
-              work hard to get to the expo. You work hard at the expo. And then
-              you go home Sunday night and try to reconstruct 40 conversations
-              from a pocket full of cards and a phone full of first names.
+              Network marketing and direct sales share one operational problem:
+              the most important decisions — who to call, which leg to focus on,
+              where volume is falling — are buried across six different apps.
+              Leaders waste hours every morning just assembling the picture. Then
+              they have to figure out what to do about it.
             </p>
             <p className="mt-5 text-lg leading-relaxed text-zinc-600">
-              LeaderLeads was built to close the gap between the conversation
-              and the follow-up. Not with a complicated CRM that requires
-              training and setup. Not with expensive NFC hardware that only
-              works in specific conditions. With a free card that does the work
-              you don&apos;t have time to do — and one exclusive feature, Memory
-              Moment, that changes the follow-up entirely.
+              LeaderHQ was built to close that gap. Not with another dashboard
+              that shows you what happened. With a command center that tells you
+              what to do about it — in plain language, with the right urgency,
+              before the window closes.
             </p>
             <p className="mt-5 text-lg leading-relaxed text-zinc-600">
-              We&apos;re part of the Leader Suite of software products and tools
-              for leaders. LeaderLeads is where the connection happens. The rest
-              of the suite is built around what happens next.
+              We&apos;re part of the Leader Suite of software tools for field
+              leaders. LeaderHQ is the intelligence layer on top of all of it —
+              reading every connected tool and translating the data into three
+              things to do today.
             </p>
             <div className="mt-10">
               <a
-                href="https://leaderhq.io"
+                href={`${APP_URL}/join`}
                 className="inline-flex min-h-[44px] items-center justify-center rounded-xl bg-brand-green px-6 text-base font-semibold text-white shadow-md shadow-brand-green/25 transition hover:brightness-110 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-navy"
               >
-                Visit Your Sales Command Center — LeaderHQ →
+                Get LeaderHQ →
               </a>
             </div>
           </FadeIn>
@@ -139,22 +140,27 @@ export default function AboutPage() {
               Part of the Leader Suite
             </h2>
             <p className="mt-5 text-lg leading-relaxed text-zinc-600">
-              LeaderLeads is one product in a growing suite of tools for
-              leaders, sales professionals, and the organizations they build.
-              Visit Your Sales Command Center — LeaderHQ to see what else we&apos;re building.
+              LeaderHQ is the command center. Leader Suite tools — LeaderLeads,
+              LeaderSend, LeaderCal, LeaderStreams — feed it the data. Together
+              they give field leaders a complete picture of their business and
+              a clear list of what to do about it.
             </p>
             <a
-              href="https://leaderhq.io"
+              href={`${APP_URL}/join`}
               className="mt-8 inline-flex min-h-[44px] items-center justify-center rounded-xl bg-brand-navy px-6 text-base font-semibold text-white shadow-md transition hover:brightness-125 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-green"
             >
-              Visit Your Sales Command Center — LeaderHQ
+              Get LeaderHQ Free
             </a>
           </FadeIn>
         </section>
       </main>
       <SiteFooter
-        productSuffix="Leads"
-        columns={[{"heading":"Product","links":[{"label":"How It Works","href":"/how-it-works"},{"label":"Memory Moment","href":"/memory-moment"},{"label":"Event Mode","href":"/how-it-works#event-mode"},{"label":"Pricing","href":"/pricing"},{"label":"System Status","href":"https://leaderhq.io/status"}]},{"heading":"Solutions","links":[{"label":"Network Marketing","href":"/for-network-marketing"},{"label":"Conferences & Events","href":"/for-conferences"},{"label":"Summer Sales","href":"/for-summer-sales"},{"label":"Sales Teams","href":"/for-teams"},{"label":"Blog & Resources","href":"/blog"}]},{"heading":"Company","links":[{"label":"About LeaderHQ","href":"/about"},{"label":"Contact","href":"/contact"},{"label":"Privacy Policy","href":"/privacy"},{"label":"Terms of Service","href":"/terms"},{"label":"Security & GDPR","href":"/security"}]}]}
+        productSuffix="HQ"
+        columns={[
+          { heading: 'Product', links: [{ label: 'How It Works', href: '/#how-it-works' }, { label: 'Action Intelligence', href: '/#intelligence' }, { label: 'Leader Suite', href: '/#suite' }, { label: 'Pricing', href: '/pricing' }] },
+          { heading: 'Solutions', links: [{ label: 'Network Marketing', href: '/for/network-marketing' }, { label: 'Conferences & Events', href: '/for/conferences' }, { label: 'Sales Teams', href: '/for/sales-teams' }] },
+          { heading: 'Company', links: [{ label: 'About LeaderHQ', href: '/about' }, { label: 'Contact', href: '/contact' }, { label: 'Privacy Policy', href: '/privacy' }, { label: 'Terms of Service', href: '/terms' }, { label: 'Security & GDPR', href: '/security' }] },
+        ]}
       />
     </div>
   );

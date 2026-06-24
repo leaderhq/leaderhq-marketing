@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { SuiteBar, SiteNav, SiteFooter, FadeIn, TypewriterHeadline } from '@leader/marketing-ui';
+import { SiteNav, SiteFooter, FadeIn, TypewriterHeadline } from '@leader/marketing-ui';
 import { HqCommandMock } from './_marketing/mocks';
 
 const APP_URL = 'https://app.leaderhq.io';
@@ -164,7 +164,6 @@ const WHO = [
 export default function HomePage(): JSX.Element {
   return (
     <div className="flex min-h-screen flex-col bg-white text-zinc-900">
-      <SuiteBar appUrl={APP_URL} />
       <SiteNav
         productSuffix="HQ"
         links={[
