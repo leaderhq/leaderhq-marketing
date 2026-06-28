@@ -22,6 +22,13 @@ export const metadata: Metadata = {
   description: "LeaderHQ reads your comp plan, connects your tools, and tells you exactly who to call and what to do — every single morning.",
   applicationName: "LeaderHQ",
   manifest: "/manifest.webmanifest",
+  icons: {
+    icon: [
+      { url: "/favicon-light.png", type: "image/png", media: "(prefers-color-scheme: light)" },
+      { url: "/favicon-dark.png", type: "image/png", media: "(prefers-color-scheme: dark)" },
+      { url: "/favicon.ico", sizes: "any" },
+    ],
+  },
   appleWebApp: {
     capable: true,
     title: "LeaderHQ",
