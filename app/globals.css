@@ -15,6 +15,10 @@
   /* LeaderLeads brand palette — source of truth, matches the favicon */
   --color-brand-navy: #0d1b2e;
   --color-brand-green: #5cb85c;
+  /* Accessible foreground variant: 5.03:1 on white (WCAG AA). Use for text on
+     light backgrounds. --color-brand-green is fine as a button background with
+     white text but fails as foreground text (2.48:1). */
+  --color-brand-green-text: #3a7d3a;
   --color-brand-blue: #0160ed;
 }
 
@@ -43,14 +47,14 @@ body {
 }
 .headline-rotate {
   display: block;
-  color: var(--color-brand-green);
+  color: var(--color-brand-green-text);
   min-height: 1.15em;
 }
 .typewriter-cursor {
   display: inline-block;
   width: 4px;
   height: 0.82em;
-  background: var(--color-brand-green);
+  background: var(--color-brand-green-text);
   margin-left: 3px;
   border-radius: 2px;
   vertical-align: middle;
