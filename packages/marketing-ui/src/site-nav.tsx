@@ -128,7 +128,7 @@ export function SiteNav({
             <Link
               key={link.href}
               href={link.href}
-              className={`text-sm font-medium transition-colors ${
+              className={`inline-flex min-h-[44px] items-center text-sm font-medium transition-colors ${
                 isActive(link.href) ? 'text-brand-green' : 'text-zinc-700 hover:text-brand-navy'
               }`}
             >
@@ -151,7 +151,7 @@ export function SiteNav({
                 onClick={() => setSolutionsOpen((o) => !o)}
                 aria-haspopup="menu"
                 aria-expanded={solutionsOpen}
-                className={`inline-flex items-center gap-1 text-sm font-medium transition-colors ${
+                className={`inline-flex min-h-[44px] items-center gap-1 text-sm font-medium transition-colors ${
                   solutionsActive || solutionsOpen ? 'text-brand-green' : 'text-zinc-700 hover:text-brand-navy'
                 }`}
               >
@@ -195,7 +195,7 @@ export function SiteNav({
             <Link
               key={link.href}
               href={link.href}
-              className={`text-sm font-medium transition-colors ${
+              className={`inline-flex min-h-[44px] items-center text-sm font-medium transition-colors ${
                 isActive(link.href) ? 'text-brand-green' : 'text-zinc-700 hover:text-brand-navy'
               }`}
             >
