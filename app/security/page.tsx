@@ -37,7 +37,7 @@ export default function SecurityPage() {
               This page covers how we protect your data technically and operationally, and
               your rights under the General Data Protection Regulation (GDPR). For a full
               description of what data we collect and why, see our{' '}
-              <a href="/privacy" className="font-medium text-brand-green hover:underline">
+              <a href="/privacy" className="font-medium text-[--color-brand-green-text] hover:underline">
                 Privacy Policy
               </a>
               .
@@ -115,7 +115,7 @@ export default function SecurityPage() {
                 regarding your personal data. To exercise any of them, email us at{' '}
                 <a
                   href="mailto:privacy@leaderhq.io"
-                  className="font-medium text-brand-green hover:underline"
+                  className="font-medium text-[--color-brand-green-text] hover:underline"
                 >
                   privacy@leaderhq.io
                 </a>{' '}
@@ -187,7 +187,7 @@ export default function SecurityPage() {
                 A full list of sub-processors is available on request at{' '}
                 <a
                   href="mailto:privacy@leaderhq.io"
-                  className="font-medium text-brand-green hover:underline"
+                  className="font-medium text-[--color-brand-green-text] hover:underline"
                 >
                   privacy@leaderhq.io
                 </a>
@@ -201,7 +201,7 @@ export default function SecurityPage() {
                 Agreement for your own GDPR compliance, email{' '}
                 <a
                   href="mailto:privacy@leaderhq.io"
-                  className="font-medium text-brand-green hover:underline"
+                  className="font-medium text-[--color-brand-green-text] hover:underline"
                 >
                   privacy@leaderhq.io
                 </a>{' '}
@@ -218,7 +218,7 @@ export default function SecurityPage() {
                 directly at{' '}
                 <a
                   href="mailto:privacy@leaderhq.io"
-                  className="font-medium text-brand-green hover:underline"
+                  className="font-medium text-[--color-brand-green-text] hover:underline"
                 >
                   privacy@leaderhq.io
                 </a>{' '}
@@ -236,7 +236,7 @@ export default function SecurityPage() {
                 <br />
                 <a
                   href="mailto:privacy@leaderhq.io"
-                  className="font-medium text-brand-green hover:underline"
+                  className="font-medium text-[--color-brand-green-text] hover:underline"
                 >
                   privacy@leaderhq.io
                 </a>
