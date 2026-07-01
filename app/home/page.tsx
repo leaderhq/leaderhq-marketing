@@ -1,6 +1,6 @@
 import type { JSX } from 'react';
 import { SiteNav, SiteFooter, FadeIn, TypewriterHeadline } from '@leader/marketing-ui';
-import { HqCommandMock } from './_marketing/mocks';
+import { HqCommandMock } from '../_marketing/mocks';
 
 const APP_URL = 'https://app.leaderhq.io';
 
