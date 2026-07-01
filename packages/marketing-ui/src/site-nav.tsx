@@ -278,20 +278,14 @@ export function SiteNav({
               </Link>
             ))}
           </div>
-          <div className="mt-6 flex flex-col gap-2">
+          <div className="mt-6">
             <Link
               href={ctaHref}
               onClick={closeMobile}
-              className="rounded-full bg-brand-green px-4 py-3 text-center text-sm font-semibold text-white"
+              className="block rounded-full bg-brand-green px-4 py-3 text-center text-sm font-semibold text-white"
             >
               {ctaLabel}
             </Link>
-            <a
-              href={loginHref}
-              className="rounded-full bg-brand-navy px-4 py-3 text-center text-sm font-semibold text-white"
-            >
-              Client Login
-            </a>
           </div>
         </div>
       )}
