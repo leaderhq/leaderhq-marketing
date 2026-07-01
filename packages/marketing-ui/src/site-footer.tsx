@@ -79,7 +79,7 @@ export function SiteFooter({
                 src={wordmarkSrc}
                 alt={`Leader${productSuffix}`}
                 style={{ width: 'auto', display: 'block' }}
-                className="h-9"
+                className="h-7"
               />
             </Link>
             <address className="mt-5 text-sm not-italic leading-relaxed text-zinc-600">
@@ -110,7 +110,7 @@ export function SiteFooter({
       <div className="border-t border-zinc-200 bg-white">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-4 py-5 text-xs text-zinc-500 md:flex-row md:px-6">
           <p className="text-center md:text-left">
-            © {new Date().getFullYear()} LeaderHQ, a division of Know Freedom Technologies. All rights reserved.
+            © {new Date().getFullYear()} LeaderHQ. All rights reserved.
           </p>
           {socialLinks.length > 0 && (
             <div className="flex items-center gap-2">

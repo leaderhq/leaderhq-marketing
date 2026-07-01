@@ -119,7 +119,7 @@ export function SiteNav({
             src={wordmarkSrc}
             alt={`Leader${productSuffix}`}
             style={{ width: 'auto', display: 'block' }}
-            className="h-9 sm:h-11"
+            className="h-7 sm:h-9"
           />
         </Link>
 

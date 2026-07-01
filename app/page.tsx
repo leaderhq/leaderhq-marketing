@@ -77,7 +77,6 @@ const FOOTER_COLUMNS = [
     links: [
       { label: 'The Suite', href: '#suite' },
       { label: 'Book a Demo', href: '#demo' },
-      { label: 'Full Site', href: '/home' },
     ],
   },
   {
