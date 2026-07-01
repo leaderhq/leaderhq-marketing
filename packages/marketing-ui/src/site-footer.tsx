@@ -79,7 +79,7 @@ export function SiteFooter({
                 src={wordmarkSrc}
                 alt={`Leader${productSuffix}`}
                 style={{ width: 'auto', display: 'block' }}
-                className="h-7"
+                className="h-[33px]"
               />
             </Link>
             <address className="mt-5 text-sm not-italic leading-relaxed text-zinc-600">
